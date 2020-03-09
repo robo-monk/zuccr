@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Zuccr is an open source social media app, heavily inspired by Facebook. Built on Ruby on Rails, alongside the curriculum of [TheOdinProject](https://www.theodinproject.com/).
 
-Things you may want to cover:
+Below, I've listed various key-points I found interesting while developing the app. Feel free to copy any of these.
 
-* Ruby version
+---
 
-* System dependencies
+**Database Build**
 
-* Configuration
+For this project I used PostgreSQL in the development environment as well. This makes the deployment on Heroku easier and cleaner. 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - Database schema:
+ 
+ ![DB Schema](https://i.imgur.com/XCYSWvj.png)
+ 
+ *btw I created the diagram using [this cool app](https://dbdiagram.io)*
