@@ -7,10 +7,20 @@
 <p>
   <%= @post.body %>
 </p>
-<br>
+
+<p>
+<%= @post.likes.count %> Likes
+</p>
+
 <%
 =begin%>
- <%= link_to 'Edit', edit_post_path(@post) %> | 
+ <%= link_to "Call Action", like_post_path(@post), class: "button" %> 
 <%
 =end%>
-<%= link_to 'Back', posts_path %>
+<% unless current_user.liked_posts.include? @post%>
+  <%= button_to 'Like', like_path, method: :get %>
+<% else %>
+  <%= button_to 'Unlike', unlike_path, method: :get %>
+<% end %>
+<br>
+<%= link_to "Back", posts_path %>

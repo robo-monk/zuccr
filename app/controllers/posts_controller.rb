@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit, :update, :destroy, :like, :unlike]
 
   # GET /posts
   # GET /posts.json
@@ -61,6 +61,25 @@ class PostsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def like
+    unless current_user.liked_posts.include? @post
+      @post.likes << current_user.likes.build
+    else
+      
+    end
+    redirect_to @post
+  end
+
+  def unlike
+    if current_user.liked_posts.include? @post
+      @post.likes.delete current_user.likes.find_by_post_id(@post.id)
+    else
+
+    end
+    redirect_to @post
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
