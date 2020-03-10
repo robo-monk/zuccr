@@ -10,8 +10,9 @@ Below, I've listed various key-points I found interesting while developing the a
 
 For this project I used PostgreSQL in the development environment as well. This makes the deployment on Heroku easier and cleaner. 
 
- - Database schema:
+ - Database schema (V0):
  
+ This is the initial schema I went with, which later will be expanded to support friend requests, mentions and other types of notifications.
  ![DB Schema](https://i.imgur.com/XCYSWvj.png)
  
  *btw I created the diagram using [this cool app](https://dbdiagram.io)*
