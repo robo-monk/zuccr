@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
+  <h2><%= @post.title %></h2>
+  <i>- by <%= link_to @post.user.name, user_path(@post.user)%> </i> 
+<br>
+<br>
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
   <%= @post.body %>
 </p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
+<br>
+<%
+=begin%>
+ <%= link_to 'Edit', edit_post_path(@post) %> | 
+<%
+=end%>
 <%= link_to 'Back', posts_path %>

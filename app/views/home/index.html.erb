@@ -1,8 +1,19 @@
 <h1>Zuccr</h1>
 <br>
-<p>What is actually popping dear friends?</p>
 <br>
-<hr>
-<br>
-<%= link_to  "Continue", users_path %>
 
+<% if user_signed_in? %>
+  <h3> <%= current_user.name%> </h3>
+  <%= link_to 'Create', new_post_path %> <br>
+  <%= link_to 'Explore', posts_path %> <br>
+  <%= link_to 'Notifications', '#' %> <br>
+
+  <%= link_to 'My profile', user_path(current_user) %> <br>
+
+  <br>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+
+
+<% else %>
+  <%= link_to  "Log In", users_path %>
+<%end%>
