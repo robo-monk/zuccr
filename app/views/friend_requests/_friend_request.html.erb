@@ -1,8 +1,8 @@
 <div class='friend_request'>
-<% unless friend_request.requester==current_user%>
+<% unless friend_request.requester_id==current_user.id%>
   <%= render friend_request.requester %>
+  <p style="margin-left: 20%;"><%= link_to  "accept", "/friendship/#{friend_request.id}" %> </p>
 <%else%>
   <%= render friend_request.target %>
 <%end%>
-<p style="margin-left: 20%;"><%= link_to  "accept", "/friendship/#{friend_request.id}" %> </p>
 </div>

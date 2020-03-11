@@ -1,34 +1,41 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= render  "shared/logo" %>
+<br>
+<br>
+<div class="form">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    <%= f.text_field :name, placeholder: 'name', autofocus: true, autocomplete: "name", class: 'user_text_input' %>
   </div>
+  <br>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, placeholder: 'email', autofocus: true, autocomplete: "email", class: 'user_text_input' %>
   </div>
+  <br>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password %>
+    <%= f.password_field :password, placeholder: 'password', class: 'user_text_input' %>
   </div>
+  <br>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
+    <%= f.password_field :password_confirmation, placeholder: 'confirm password', class: 'user_text_input' %>
   </div>
-
+  <br>
+  <br>
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Sign up", class: 'submit_button' %>
   </div>
 <% end %>
+<br>
+  or
+  <%= render "devise/shared/links" %>
+</div>
 
-<%= render "devise/shared/links" %>
+
+
+<div class='the_zucc'>
+<%= image_tag  "actual_zucc.png", class: 'the_zucc_image' %>
+</div>

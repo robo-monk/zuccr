@@ -4,5 +4,10 @@
 <%= render  "shared/dashboard" %>
 
 <div class="users">
-  <%= render @users%>
+  <%= render @users %>
+  <% if @users.count == 0 %>
+      <i style="opacity: 50%; padding: 20px; margin-left: 20%;">
+        no friends
+      </i>
+  <% end %>
 </div>
