@@ -22,5 +22,7 @@ For this project I used PostgreSQL in the development environment as well. This 
 
 [Devise](https://github.com/heartcombo/devise) is a powerful gem that is extremely good at handling user logins and signups, with sessions and cookies in mind. It's considered pretty secure, and when developing production applications usually devs tend to 'outsource' the user handling to a gem, like Devise.
 
+**Design**
 
+Design is an extremely important part of any application. My approach in designing the app, was simply to sketch the rough vision I had for the app in [Adobe XD](https://www.adobe.com/products/xd.html) and then slowly implement it with dynamic HTML, SCSS, and JavaScript. Some of the early on sketches:
 
