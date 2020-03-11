@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
 
   # GET /comments
@@ -24,11 +25,13 @@ class CommentsController < ApplicationController
   # POST /comments
   # POST /comments.json
   def create
-    @comment = Comment.new(comment_params)
+    commenting_post = Post.find(params[:post_id])
+    @comment = current_user.comments.build(comment_params)
+    @comment.post = commenting_post
 
     respond_to do |format|
       if @comment.save
-        format.html { redirect_to @comment, notice: 'Comment was successfully created.' }
+        format.html { redirect_to post_path(commenting_post), notice: 'Comment was successfully posts.' }
         format.json { render :show, status: :created, location: @comment }
       else
         format.html { render :new }

@@ -11,6 +11,8 @@ class PostsController < ApplicationController
   # GET /posts/1
   # GET /posts/1.json
   def show
+    @user_on_post_new_comment = current_user.comments.build
+    @user_on_post_new_comment.post = @post
   end
 
   # GET /posts/new
