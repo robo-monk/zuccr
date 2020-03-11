@@ -1,3 +1,4 @@
+<div class="form_centered">
 <%= form_with(model: post, local: true) do |form| %>
   <% if post.errors.any? %>
     <div id="error_explanation">
@@ -10,18 +11,16 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, placeholder: "don't clickbait..", class: 'user_text_input' %>
   </div>
-
+<br>
   <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
+    <%= form.text_area :body, placeholder: "don't lorem ipsum this..", class: 'user_large_text_input'%>
   </div>
-
+ <br>
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :post, class: 'submit_button' %>
   </div>
 <% end %>
+</div>

@@ -1,3 +1,19 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+div.dashboard{
+  margin-top: 150px;
+  text-align: center;
+  padding: 20px;
+  outline: 2px solid black;
+  max-width: 200px;
+  line-height: 1.8;
+  float: left;
+  position: fixed;
+  overflow: hidden;
+}
+
+div.logo{
+  position: fixed;
+}

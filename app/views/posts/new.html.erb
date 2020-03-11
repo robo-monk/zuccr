@@ -1,5 +1,16 @@
-<h1>New Post</h1>
+<%
+=begin%>
+ <h1>New Post</h1> 
+<%
+=end%>
+
+<%= render "shared/logo" %>
+<%= render "shared/dashboard" %>
+<%
+=begin%>
+ <%= link_to 'Back', root_path %> 
+<%
+=end%>
 
 <%= render 'form', post: @post %>
 
-<%= link_to 'Back', root_path %>

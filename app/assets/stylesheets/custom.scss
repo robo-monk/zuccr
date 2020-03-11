@@ -1,0 +1,281 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #3325F5;
+}
+
+div.logo {
+  padding: 20px;
+}
+
+div.the_zucc {
+  position: fixed;
+  margin: -10px auto;
+  margin-left: 40%;
+  bottom: 0;
+  z-index: 9999;
+  box-sizing: border-box;
+}
+
+div.form {
+  margin-top: 60px;
+  display: block;
+  text-align: center;
+  padding: 50px;
+  outline: 2px solid black;
+  max-width: 300px;
+  line-height: 1.8;
+  div.field{
+    .user_text_input{
+      font-size: larger;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #000000;
+      padding: 2px 5px;
+      &:focus {
+        border-bottom: 2px solid #3325F5;
+      }
+      &:hover {
+        border-bottom: 2px solid #3325F5;
+      }
+    }
+    .user_large_text_input {
+      font-size: larger;
+      font-family: 'Roboto',
+      sans-serif;
+      height: 100px;
+      width: 550px;
+      background: transparent;
+      border: none;
+      border: 2px solid #000000;
+      padding: 2px 5px;
+
+      &:focus {
+        border-bottom: 2px solid #3325F5;
+      }
+
+      &:hover {
+        border-bottom: 2px solid #3325F5;
+      }
+    }
+  }
+
+  div.actions{
+
+    .submit_button {
+      color: black;
+      font-size: xx-large;
+      font-weight: bolder;
+      background: transparent;
+      outline: none;
+      border: none;
+      &:hover {
+        color: #3325F5;
+        cursor: pointer;
+      }
+    }
+
+    .submit_button_small {
+      color: black;
+      font-size: medium;
+      font-weight: bolder;
+      background: transparent;
+      outline: none;
+      border: none;
+
+      &:hover {
+        color: #3325F5;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  i{
+    opacity: 60%;
+  }
+  
+}
+
+
+
+div.form_centered {
+  // @extend div.form;
+  // overflow: auto;
+  width: 700px;
+  margin: auto;
+  text-align: center;
+  align-items: center;
+  display: grid;
+  line-height: 1.8;
+  margin-left: 20%;
+  div.field {
+    padding-top: 40px;
+    .user_text_input {
+      font-size: larger;
+      font-family: 'Roboto',
+      sans-serif;
+      background: transparent;
+      border: none;
+      border-bottom: 2px solid #000000;
+      padding: 2px 5px;
+
+      &:focus {
+        border-bottom: 2px solid #3325F5;
+      }
+
+      &:hover {
+        border-bottom: 2px solid #3325F5;
+      }
+    }
+
+    .user_large_text_input {
+      font-size: larger;
+      font-family: 'Roboto',
+        sans-serif;
+      height: 400px;
+      width: 850px;
+      background: transparent;
+      border: none;
+      border: 2px solid #000000;
+      padding: 10px;      
+      &:focus {
+        border: 2px solid #3325F5;
+      }
+
+      &:hover {
+        border: 2px solid #3325F5;
+      }
+    }
+  }
+
+  div.actions {
+
+    .submit_button {
+      color: black;
+      font-size: xx-large;
+      font-weight: bolder;
+      background: transparent;
+      outline: none;
+      border: none;
+
+      &:hover {
+        color: #3325F5;
+        cursor: pointer;
+      }
+    }
+
+    .submit_button_small {
+      color: black;
+      font-size: medium;
+      font-weight: bolder;
+      background: transparent;
+      outline: none;
+      border: none;
+
+      &:hover {
+        color: #3325F5;
+        cursor: pointer;
+      }
+    }
+
+  }
+
+  i {
+    opacity: 60%;
+  }
+
+}
+
+div.post {
+  padding: 10px;
+  margin-left: 20%;
+}
+
+div.all_comments {
+  // margin-left: 20%;
+  text-align: justify;
+  padding: 10px;
+  display: grid;
+
+  div.comment{
+    display: block;
+  }
+}
+
+div.posts {
+  margin-left: 20%;
+}
+
+div.user {
+  margin-left: 20%;
+}
+
+
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div.field,
+div.actions {
+  margin-bottom: 10px;
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+label {
+  display: block;
+}
+
+* {
+  -webkit-transition: all 0.08s ease;
+  -moz-transition: all 0.08s ease;
+  -ms-transition: all 0.08s ease;
+  -o-transition: all 0.08s ease;
+}

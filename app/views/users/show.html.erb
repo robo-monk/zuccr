@@ -1,21 +1,29 @@
+<%= render  "shared/logo" %>
+<%= render  "shared/dashboard" %>
+
 <p id="notice"><%= notice %></p>
 
-<h1>
-  <%= @user.name %>
-</h1>
-<i> <%= @user.email %> </i>
-<% if current_user == @user %>
-  <%= link_to 'Edit', edit_user_path(@user) %>
-<% end %>
-<br>
-<br>
+<div class='user'>
+  <h1>
+    <%= @user.name %>
+  </h1>
+  <i> <%= @user.email %> </i>
+  <% if current_user == @user %>
+    <%= link_to 'Edit', edit_user_path(@user) %>
+  <% end %>
+  <br>
+  <br>
 
-<br>
+  <br>
 
-<p>
-  <%= render @user.posts %>
-</p>
+  <p>
+    <%= render @user.posts %>
+  </p>
 
+</div>
 
-
-<%= link_to 'Back', root_path %>
+<%
+=begin%>
+ <%= link_to 'Back', root_path %> 
+<%
+=end%>

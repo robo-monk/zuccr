@@ -1,19 +1,7 @@
-<h1>Zuccr</h1>
+<%= render "shared/logo" %>
+
 <br>
 <br>
 
-<% if user_signed_in? %>
-  <h3> <%= current_user.name%> </h3>
-  <%= link_to 'Create', new_post_path %> <br>
-  <%= link_to 'Explore', posts_path %> <br>
-  <%= link_to 'Notifications', '#' %> <br>
 
-  <%= link_to 'My profile', user_path(current_user) %> <br>
-
-  <br>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-
-
-<% else %>
-  <%= link_to  "Log In", users_path %>
-<%end%>
+<%= render "shared/dashboard" %>
