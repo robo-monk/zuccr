@@ -1,6 +1,6 @@
 # README
 
-Zuccr is an open source social media app, heavily inspired by Facebook. Built on Ruby on Rails, alongside the curriculum of [TheOdinProject](https://www.theodinproject.com/).
+Zuccr is an open source social media app, heavily inspired by Facebook. Built on Ruby on Rails, alongside the curriculum of [TheOdinProject](https://www.theodinproject.com/). Play with it [live](https://zuccr.herokuapp.com/)
 
 Below, I've listed various key-points I found interesting while developing the app. Feel free to copy any of these.
 
