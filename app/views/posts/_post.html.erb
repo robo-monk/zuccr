@@ -7,5 +7,8 @@
 </p>
 <p>
 <%= post.likes.count %> likes | <%= post.comments.count%> comments
+<i style="opacity: 50%;"> 
+     - posted <%= time_ago_in_words(post.created_at)%> ago 
+  </i>
 <br>
 <br>

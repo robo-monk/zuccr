@@ -3,39 +3,36 @@
 <%= render "shared/dashboard" %>
 
 <div class="post">
-  <h1><%= @post.title %></h1>
-  <i>- by <%= link_to @post.user.name, user_path(@post.user)%> </i> 
-  <br>
-  <br>
+  <h1>
+    <%= @post.title %>
+  </h1>
   <p>
     <%= @post.body %>
   </p>
-
-
+  <br>
+  <p> 
+    by <%= link_to @post.user.name, user_path(@post.user)%>
+  </p> 
+  <i style="opacity: 50%;"> 
+    posted <%= time_ago_in_words(@post.created_at)%> ago 
+  </i>
+  <br>
+  <br>
   <p>
-  <%= @post.likes.count %> Likes
+    <%= @post.likes.count %> Likes
   </p>
-
   <% unless current_user.liked_posts.include? @post%>
     <%= button_to 'Like', like_path, method: :get %>
   <% else %>
     <%= button_to 'Unlike', unlike_path, method: :get %>
   <% end %>
-
-  <br>
-  <br>
-
   <div class="all_comments">
     <h3>Comments <i><%= @post.comments.count %></i> </h3>
       <%= render 'comments/form', comment: Comment.new, post_id: @post.id %>
-    <br>
-
     <%= render @post.comments %>
     <br>
   </div>
     <br>
     <br>
-    <br>
-
   <%= link_to  "back", posts_path %>
 </div>

@@ -6,3 +6,6 @@
 <%= render  @posts %>
 
 </div>
+<div id="infinite-scrolling" style="margin-left: 40%;">
+  <%= will_paginate @posts, :page_links => false %>
+</div>

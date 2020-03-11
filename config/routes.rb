@@ -7,6 +7,12 @@ Rails.application.routes.draw do
   resources :users
   resources :posts
   
+  get 'users/:target_id/friend_request', to: 'users#friend_request', as: 'request'
+  get '/friendship/:friendship_id', to: 'users#befriend', as: 'frienship'
+
+  get '/notifications', to: 'users#notifications', as: 'notificaion'
+
+
   get '/posts/:id/like', to: 'posts#like', as: 'like'
   get '/posts/:id/unlike', to: 'posts#unlike', as: 'unlike'
 

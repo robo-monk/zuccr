@@ -10,12 +10,22 @@
   <i> <%= @user.email %> </i>
   <% if current_user == @user %>
     <%= link_to 'Edit', edit_user_path(@user) %>
+  <% else %>
+    <% unless current_user.out_friend_requests.any?{ |fr| fr.target_id.to_i == @user.id.to_i }%>
+      <%= link_to  "/friend_request", user_url(@user)+"/friend_request" %>
+    <% else %>
+      <i style="opacity: 50%;"> /already_requested</i>
+    <% end %>
   <% end %>
   <br>
   <br>
   <br>
   <p>
-    <%= render @user.posts %>
+    <% if @user.posts.count == 0 %>
+      <i style="opacity: 50%;"> no posts</i>
+    <% else %>
+      <%= render @user.posts %>
+    <%end%>
   </p>
 </div>
 
