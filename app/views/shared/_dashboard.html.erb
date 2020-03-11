@@ -3,9 +3,9 @@
   <h1> <%= link_to current_user.name.gsub(/\s+/m, ' ').gsub(/^\s+|\s+$/m, '').split(" ")[0], user_path(current_user) %></h1>
   <br>
   <h2> <%= link_to 'create', new_post_path %>  </h2>
-  <h2> <%= link_to 'explore', posts_path %> </h2>
+  <h2> <%= link_to 'explore', users_path %> </h2>
   <h2> <%= link_to 'notifications', '#' %> </h2>
-  <h2> <%= link_to 'friends', '#' %> </h2>
+  <h2> <%= link_to 'friends', users_path %> </h2>
 
   <br>
 
